@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:infra="clr-namespace:CardHolder_MobileApp.Infrastructure;assembly=CardHolder_MobileApp"
+             x:Class="CardHolder_MobileApp.App">
+	<Application.Resources>
+
+		<!-- Application resource dictionary -->
+
+
+
+        <ResourceDictionary>
+
+            <Color x:Key="FontColorBlack">#333</Color>
+            <Color x:Key="FontColor">#52656b</Color>
+            <Color x:Key="BtnBgColor">#1984c8</Color>
+            <Color x:Key="MenuFontColorWhite">#fff</Color>
+
+            <Color x:Key="BgColorNavigatorBlack">#222</Color>
+
+            <OnPlatform x:Key="PaddingGeneralPage"
+            x:TypeArguments="Thickness"
+            iOS="10,30,10,10"
+            Android="10" />
+
+            <!--Fonts-->
+            <OnPlatform x:Key="GeneralButtonFont"
+                  x:TypeArguments="Font"
+                  iOS="14"
+                  Android="14" />
+
+            <!--Styles-->
+            <Style
+                TargetType="Button">
+                <Setter Property="Font"
+                Value="{StaticResource GeneralButtonFont}"></Setter>
+                <!--<Setter Property="BorderRadius"
+                Value="20"></Setter>-->
+                <Setter Property="HeightRequest"
+                Value="40"></Setter>
+                <Setter Property="BackgroundColor"
+                Value="{StaticResource BtnBgColor}"></Setter>
+                <Setter Property="TextColor"
+                Value="White"></Setter>
+            </Style>
+
+            <!-- Locator -->
+            <infra:InstanceLocator x:Key="Locator"></infra:InstanceLocator>
+        </ResourceDictionary>
+
+
+    </Application.Resources>
+</Application>

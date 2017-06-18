@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CardHolder_MobileApp.Views.MainPage"
+             x:Name ="MainPage"
+             Title ="Ordenes"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+
+
+    <Grid>
+        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+
+            <!--<ListView
+                   x:Name="ListMascotas"
+                   ItemsSource="{Binding OrdenVenta}"
+                   HasUnevenRows="True"
+                   BackgroundColor="White"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                   SelectedItem="{Binding SelectedItem, Mode=TwoWay}" ItemSelected="ListMascotas_ItemSelected" ItemTapped="ListMascotas_ItemTapped" >
+                <ListView.Header>
+                    <Label Text="Header"></Label>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <StackLayout Grid.Row="1" Grid.Column="0" VerticalOptions="Center"  Orientation="Horizontal" WidthRequest="120">
+                                    <Label
+                                        VerticalOptions="Center"
+                                        TextColor="{StaticResource FontColorBlack}"
+                                        Text="{ Binding Folio }"/>
+                                </StackLayout>
+                                <StackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="Center"  Orientation="Horizontal" WidthRequest="120" >
+                                    <Label
+                                        VerticalOptions="Center"
+                                        TextColor="{StaticResource FontColorBlack}"
+                                        Text="{ Binding Emisor }"/>
+                                </StackLayout>
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                --><!--<ListView.Behaviors>
+                    <behavior:IniniteListScrollingBehavior
+                                    Command="{Binding Path=BindingContext.RefreshCommand, Source={x:Reference Name=FilterPage}}" >
+                    </behavior:IniniteListScrollingBehavior>
+                </ListView.Behaviors>--><!--
+            </ListView>-->
+        </ScrollView>
+        <ContentView  BackgroundColor="#222222" Opacity="0.5" IsVisible="{Binding IsBusy}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"  WidthRequest="50" HeightRequest="50"   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+        </ContentView>
+    </Grid>
+</ContentPage>

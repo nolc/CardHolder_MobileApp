@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:pages="clr-namespace:CardHolder_MobileApp.Views;assembly=CardHolder_MobileApp"
+             x:Class="CardHolder_MobileApp.Views.MasterPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title=" " />
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage x:Name="Navigator" BarTextColor="{ StaticResource MenuFontColorWhite }" BarBackgroundColor="{StaticResource BgColorNavigatorBlack}">>
+            <x:Arguments>
+                <pages:MainPage Title="Ordenes">
+                </pages:MainPage>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+    </MasterDetailPage>
