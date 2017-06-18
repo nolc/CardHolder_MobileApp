@@ -4,10 +4,21 @@
              x:Class="CardHolder_MobileApp.Views.MenuPage"
              Title ="Menu"
              Icon="ic_action_menu.png"
-             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+             
+             >
 
+    <!--BindingContext="{Binding Main, Source={StaticResource Locator}}"-->
 
-    <StackLayout Padding ="{StaticResource PaddingMenu}" BackgroundColor="{StaticResource BgColorNavigatorBlack}">
+    <StackLayout   BackgroundColor="Black" >
+
+        <Label  Text="hola mundodddd" BackgroundColor="Black" TextColor="Red"></Label>
+
+    </StackLayout>
+    
+
+    <!--<StackLayout Padding ="{StaticResource PaddingMenu}" BackgroundColor="{StaticResource BgColorNavigatorBlack}">
+
+        <Label  Text="{Binding Texto}" BackgroundColor="Black" TextColor="Red"></Label>
 
         <ListView
        ItemsSource="{Binding Menu}"
@@ -38,5 +49,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </StackLayout>
+        
+        
+    </StackLayout>-->
 </ContentPage>

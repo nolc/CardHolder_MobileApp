@@ -10,11 +10,11 @@ namespace CardHolder_MobileApp.Services
 {
     public class NavigationService
     {
-        public NavigationPage Navigator { get; set; }
+        //public NavigationPage Navigator { get; set; }
 
         public NavigationService()
         {
-            Navigator = new NavigationPage();
+            //Navigator = new NavigationPage();
         }
 
         public async void Navigate(string pageName)

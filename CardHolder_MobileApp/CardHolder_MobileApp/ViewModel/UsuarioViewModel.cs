@@ -41,7 +41,7 @@ namespace CardHolder_MobileApp.ViewModel
                 this.Usuario = "smoreno";
                 this.Contrasenia = "123";
 
-                this.SearchOrdenVenta();
+                //this.SearchOrdenVenta();
 
                 base.navigationService.SetMainPage("MasterPage");
 
@@ -76,16 +76,16 @@ namespace CardHolder_MobileApp.ViewModel
             }
         }
 
-        public void SearchOrdenVenta()
-        {
-            IsBusy = true;
+        //public void SearchOrdenVenta()
+        //{
+        //    IsBusy = true;
 
-            //var result = mascotaService.SearchOrdenVenta();
+        //    //var result = mascotaService.SearchOrdenVenta();
 
-            //Application.Current.Properties["ListOrdenVenta"] = result;
+        //    //Application.Current.Properties["ListOrdenVenta"] = result;
 
-            IsBusy = false;
-        }
+        //    IsBusy = false;
+        //}
 
         #endregion
 

@@ -15,6 +15,6 @@ namespace CardHolder_MobileApp.Views
         public LoginPage()
         {
             InitializeComponent();
-        }
+        } 
     }
 }

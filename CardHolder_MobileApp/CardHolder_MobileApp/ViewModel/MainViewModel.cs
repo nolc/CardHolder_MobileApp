@@ -1,11 +1,13 @@
 ﻿//using CardHolder_MobileApp.Model;
 using CardHolder_MobileApp.Views;
+using GalaSoft.MvvmLight.Command;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace CardHolder_MobileApp.ViewModel
@@ -16,6 +18,28 @@ namespace CardHolder_MobileApp.ViewModel
 
 
         public ObservableCollection<MenuItemViewModel> Menu { get; set; }
+
+
+        private string _texto;
+
+        public string Texto
+        {
+            get {
+
+                _texto = "Hola mundo";
+
+                return _texto;
+            }
+            set {
+
+                _texto = value;
+
+
+                OnPropertyChanged();
+            }
+        }
+
+
 
 
         #region Menu
@@ -43,9 +67,11 @@ namespace CardHolder_MobileApp.ViewModel
 
         public MainViewModel()
         {
-            base.navigationService = new Services.NavigationService();
+            //base.navigationService = new Services.NavigationService();
 
-          //  mascotaService = new OrdenVentaModel();
+            LoadMenu();
+
+            //  mascotaService = new OrdenVentaModel();
 
             //SearchOrdenVenta();
         }
@@ -86,7 +112,7 @@ namespace CardHolder_MobileApp.ViewModel
 
         //        //base.navigationService.SetMainPage("DetailPage");
 
-                
+
 
         //        //base.navigationService.Navigate("DetailPage");
 
@@ -140,5 +166,13 @@ namespace CardHolder_MobileApp.ViewModel
         //{
         //    LoadItems();
         //}
+
+        public ICommand GoToCommand { get { return new RelayCommand<string>(GoTo); } }
+
+        private void GoTo(string pageName)
+        {
+            navigationService.Navigate(pageName);
+        }
+
     }
 }

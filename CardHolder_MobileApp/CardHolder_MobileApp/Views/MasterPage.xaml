@@ -10,7 +10,7 @@
     <MasterDetailPage.Detail>
         <NavigationPage x:Name="Navigator" BarTextColor="{ StaticResource MenuFontColorWhite }" BarBackgroundColor="{StaticResource BgColorNavigatorBlack}">>
             <x:Arguments>
-                <pages:MainPage Title="Ordenes">
+                <pages:MainPage Title="Home">
                 </pages:MainPage>
             </x:Arguments>
         </NavigationPage>

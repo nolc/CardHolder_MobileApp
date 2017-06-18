@@ -11,23 +11,53 @@
 
         <ResourceDictionary>
 
-            <Color x:Key="FontColorBlack">#333</Color>
             <Color x:Key="FontColor">#52656b</Color>
-            <Color x:Key="BtnBgColor">#1984c8</Color>
+            <Color x:Key="FontColorBlack">#333</Color>
+            <!--<Color x:Key="MenuFontColor">#eee</Color>-->
+            <Color x:Key="MenuFontColor">#222</Color>
+
+
             <Color x:Key="MenuFontColorWhite">#fff</Color>
+            <Color x:Key="LineColor">#E6E6E6</Color>
+
+            <!--Bg Colors-->
+            <Color x:Key="LayoutBgColor">#ecf0f5</Color>
+            <Color x:Key="LayoutBgColorWhite">#fff</Color>
+            <Color x:Key="BtnBgColor">#1984c8</Color>
+            <Color x:Key="BgColorNavigatorWhite">#fff</Color>
+
 
             <Color x:Key="BgColorNavigatorBlack">#222</Color>
+
+
+
+
+            <Color x:Key="BtnColorGreen">#5cb85c</Color>
+            <Color x:Key="BtnColorRed">#d9534f</Color>
+            <Color x:Key="BtnColorOrange">#f0ad4e</Color>
+            <Color x:Key="BtnColorGray">#BDBDBD</Color>
+            <Color x:Key="LayoutBgColorFilters">#F2F2F2</Color>
+
+            <!--Fonts-->
+            <OnPlatform x:Key="GeneralButtonFont"
+                  x:TypeArguments="Font"
+                  iOS="18"
+                  Android="18" />
+
+            <OnPlatform x:Key="PaddingMenu"
+            x:TypeArguments="Thickness"
+            iOS="0,30,0,0"
+            Android="0" />
 
             <OnPlatform x:Key="PaddingGeneralPage"
             x:TypeArguments="Thickness"
             iOS="10,30,10,10"
             Android="10" />
 
-            <!--Fonts-->
-            <OnPlatform x:Key="GeneralButtonFont"
-                  x:TypeArguments="Font"
-                  iOS="14"
-                  Android="14" />
+            <OnPlatform x:Key="ButtonHeight"
+              x:TypeArguments="x:Double"
+              iOS="40"
+              Android="40" />
 
             <!--Styles-->
             <Style
@@ -37,17 +67,26 @@
                 <!--<Setter Property="BorderRadius"
                 Value="20"></Setter>-->
                 <Setter Property="HeightRequest"
-                Value="40"></Setter>
+                Value="50"></Setter>
+                <Setter Property="WidthRequest"
+                Value="200"></Setter>
                 <Setter Property="BackgroundColor"
                 Value="{StaticResource BtnBgColor}"></Setter>
                 <Setter Property="TextColor"
                 Value="White"></Setter>
+
+            </Style>
+
+            <Style
+                TargetType="Entry">
+
+                <Setter Property="HeightRequest"
+                Value="40"></Setter>
             </Style>
 
             <!-- Locator -->
             <infra:InstanceLocator x:Key="Locator"></infra:InstanceLocator>
         </ResourceDictionary>
-
 
     </Application.Resources>
 </Application>
