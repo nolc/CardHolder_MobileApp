@@ -14,6 +14,33 @@ namespace CardHolder_MobileApp.ViewModel
     {
         //OrdenVentaModel mascotaService;
 
+
+        public ObservableCollection<MenuItemViewModel> Menu { get; set; }
+
+
+        #region Menu
+
+        private void LoadMenu()
+        {
+            Menu = new ObservableCollection<MenuItemViewModel>();
+
+            Menu.Add(new MenuItemViewModel
+            {
+                Icon = "ic_action_conciliacion.png",
+                PageName = "MainPage",
+                Title = "Conciliación",
+            });
+
+            Menu.Add(new MenuItemViewModel
+            {
+                Icon = "ic_action_exit.png",
+                PageName = "LoginPage",
+                Title = "Cerrar sesión",
+            });
+        }
+
+        #endregion
+
         public MainViewModel()
         {
             base.navigationService = new Services.NavigationService();
