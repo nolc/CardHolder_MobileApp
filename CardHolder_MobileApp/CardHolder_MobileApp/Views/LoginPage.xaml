@@ -5,6 +5,8 @@
              Title="LoginPage"
              BindingContext="{Binding User, Source={StaticResource Locator}}">
 
+    
+    
     <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  >
         <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Padding="10" VerticalOptions="Center">
 
